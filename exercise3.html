@@ -1,1 +1,32 @@
-   <!-- Write your code here -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn">Switch to Dark</button>
+    <script>
+      let button = document.getElementById("btn");
+      let f = 0;
+      button.addEventListener("click", () => {
+        if (f == 0) {
+          document.body.style.backgroundColor = "black";
+          button.textContent = "Switch to Light";
+          f = 1;
+        } else {
+          document.body.style.backgroundColor = "White";
+          button.textContent = "Switch to Dark";
+          f = 0;
+        }
+      });
+    </script>
+  </body>
+</html>
