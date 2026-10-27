@@ -1,1 +1,39 @@
-   <!-- Write your code here -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #btn {
+        background-color: hsl(0, 97%, 74%);
+        height: 50px;
+        width: 50px;
+        border-color: rgb(255, 187, 187);
+        cursor: pointer;
+        transition: 1.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="btn"></button>
+    <script>
+      let button = document.getElementById("btn");
+      button.addEventListener("click", () => {
+        button.style.height = "500px";
+        button.style.width = "500px";
+      });
+      button.addEventListener("dblclick", () => {
+        button.style.height = "50px";
+        button.style.width = "50px";
+      });
+    </script>
+  </body>
+</html>
