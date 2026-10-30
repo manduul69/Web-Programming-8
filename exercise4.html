@@ -1,1 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+      }
+      #counter-value {
+        font-size: 4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: black;
+      }
+      button {
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="counter-value">0</div>
+    <button id="btn-subtract">-</button>
+    <button id="btn-add">+</button>
+    <button id="btn-reset">Reset</button>
 
+    <script>
+      let count = 0;
+      const counterDisplay = document.getElementById("counter-value");
+      const btnAdd = document.getElementById("btn-add");
+      const btnSubtract = document.getElementById("btn-subtract");
+      const btnReset = document.getElementById("btn-reset");
+      function updateDisplay() {
+        counterDisplay.textContent = count;
+        if (count < 0) {
+          counterDisplay.style.color = "red";
+        } else {
+          counterDisplay.style.color = "black";
+        }
+      }
+      btnAdd.addEventListener("click", () => {
+        count += 1;
+        updateDisplay();
+      });
+      btnSubtract.addEventListener("click", () => {
+        count -= 1;
+        updateDisplay();
+      });
+      btnReset.addEventListener("click", () => {
+        count = 0;
+        updateDisplay();
+      });
+    </script>
+  </body>
+</html>
